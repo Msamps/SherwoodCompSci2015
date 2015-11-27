@@ -1,0 +1,38 @@
+Public Class Form1
+
+    Private Sub btnDiv_Click(sender As Object, e As EventArgs) Handles btnDiv.Click
+        Dim M As Integer
+        Dim N As Integer
+        Dim answer As Integer
+        M = InputBox("Please Enter your first Integer") 'gets first number
+        N = InputBox("Please enter your second Integer") 'gets second number
+        answer = GCD(M, N) 'makes answer equal to the private functions values
+        MsgBox(" Your greatest Common Divisor Is " & answer) 'returns answer
+    End Sub
+
+    Private Function GCD(ByVal M As Integer, ByVal N As Integer)
+        If N = 0 Then 'if N=0 then returns the value of M
+            Return (M)
+        ElseIf N > M Then 'If N is bigger than M switches the value of them
+            Return (GCD(N, M))
+        Else
+            Return (GCD(N, M Mod N)) 'Returns the remeinder of M divided by N
+        End If
+    End Function
+
+    Private Sub btnFactorial_Click(sender As Object, e As EventArgs) Handles btnFactorial.Click
+        Dim Factorial As Double
+        Dim answer As single
+        Factorial = InputBox("Please enter the number you want to do a factorial of") 'recives the number to do a factorial of
+        answer = Fact(Factorial)
+        MsgBox("The Factorial was " & answer)
+    End Sub
+
+    Private Function Fact(ByVal Factorial As Double)
+        If Factorial = 1 Then 'if the factorial is a 1 returns a value of 1
+            Return (1)
+        Else
+            Return Factorial * Fact(Factorial - 1) 'otherwise returns factorial -1 
+        End If
+    End Function
+End Class

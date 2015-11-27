@@ -4,7 +4,7 @@ Public Class Form1
         Dim M As Integer
         Dim N As Integer
         Dim answer As Integer
-        msgbox("I changed matts code KEK")
+        msgbox("I changed this KEK")
         M = InputBox("Please Enter your first Integer") 'gets first number
         N = InputBox("Please enter your second Integer") 'gets second number
         answer = GCD(M, N) 'makes answer equal to the private functions values
